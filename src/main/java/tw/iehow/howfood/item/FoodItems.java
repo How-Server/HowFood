@@ -15,6 +15,8 @@ import java.util.function.Function;
 
 public class FoodItems {
     public static final Item SAUSAGE_PIZZA = registerWithTooltip("sausage_pizza",
+            foodSettings(64, 8, 0.3f));
+    public static final Item MUSHROOM_PIZZA = registerWithTooltip("mushroom_pizza",
             foodSettings(64, 6, 0.3f));
 
     public static void initialize() {

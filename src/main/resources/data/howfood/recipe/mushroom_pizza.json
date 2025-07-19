@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "BFM",
+        " W "
+    ],
+    "key": {
+        "#": "minecraft:red_mushroom",
+        "B": "minecraft:brown_mushroom",
+        "F": "minecraft:fern",
+        "M": "minecraft:milk_bucket",
+        "W": "minecraft:wheat"
+    },
+    "result": {
+        "id": "howfood:mushroom_pizza",
+        "count": 1
+    }
+}
