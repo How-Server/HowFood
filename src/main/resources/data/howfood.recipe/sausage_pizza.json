@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "#"
+    ],
+    "key": {
+        "#": "minecraft:bamboo_button"
+    },
+    "result": {
+        "id": "howfood:sausage_pizza",
+        "count": 1
+    }
+}

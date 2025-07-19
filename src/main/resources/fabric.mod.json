@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "howfood",
+	"version": "${version}",
+	"name": "HowFood",
+	"description": "Food for How Server!",
+	"authors": [
+		"Howie"
+	],
+	"contact": {
+		"homepage": "https://play.iehow.tw/",
+		"sources": "https://github.com/How-Server/HowFood"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/howfood/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "tw.iehow.howfood.HowFood"
+		]
+	},
+	"mixins": [
+		"howfood.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": ">=1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
