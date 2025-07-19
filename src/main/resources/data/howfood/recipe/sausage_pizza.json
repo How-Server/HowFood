@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "CFM",
+        " W "
+    ],
+    "key": {
+        "#": "minecraft:cooked_porkchop",
+        "C": "minecraft:cooked_beef",
+        "F": "minecraft:fern",
+        "M": "minecraft:milk_bucket",
+        "W": "minecraft:wheat"
+    },
+    "result": {
+        "id": "howfood:sausage_pizza",
+        "count": 1
+    }
+}
