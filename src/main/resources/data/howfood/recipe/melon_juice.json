@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "M"
+    ],
+    "key": {
+        "#": "minecraft:flint",
+        "M": "minecraft:melon"
+    },
+    "result": {
+        "id": "howfood:melon_juice",
+        "count": 1
+    }
+}

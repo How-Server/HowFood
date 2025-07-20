@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "###",
+        " E "
+    ],
+    "key": {
+        "#": "minecraft:wheat",
+        "E": "minecraft:egg"
+    },
+    "result": {
+        "id": "howfood:good_cookie",
+        "count": 1
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "P",
+        "B"
+    ],
+    "key": {
+        "#": "minecraft:honey_bottle",
+        "P": "minecraft:porkchop",
+        "B": "minecraft:bread"
+    },
+    "result": {
+        "id": "howfood:hotdog",
+        "count": 1
+    }
+}

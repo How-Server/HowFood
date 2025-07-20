@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "WPT",
+        " B "
+    ],
+    "key": {
+        "#": "howfood:salt",
+        "W": "minecraft:wheat",
+        "P": "minecraft:pufferfish",
+        "T": "minecraft:turtle_egg",
+        "B": "minecraft:beetroot_soup"
+    },
+    "result": {
+        "id": "howfood:takoyaki",
+        "count": 1
+    }
+}
