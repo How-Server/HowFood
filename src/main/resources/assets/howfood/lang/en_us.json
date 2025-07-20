@@ -1,7 +1,7 @@
 {
-  "item.howfood.sausage_pizza": "",
-  "itemTooltip.howfood.sausage_pizza": "",
-  "item.howfood.mushroom_pizza": "",
-  "itemTooltip.howfood.mushroom_pizza": "",
+  "item.howfood.sausage_pizza": "Sausage Pizza",
+  "itemTooltip.howfood.sausage_pizza": "The pizza right out of the oven with only one slice left.",
+  "item.howfood.mushroom_pizza": "Mushroom Pizza",
+  "itemTooltip.howfood.mushroom_pizza": "Howie said the pizza was delicious.",
   "itemGroup.howfood": "HowFood"
 }
