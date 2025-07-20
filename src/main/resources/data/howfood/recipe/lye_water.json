@@ -1,13 +1,12 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " # ",
-        "###",
-        " E "
+        "#",
+        "P"
     ],
     "key": {
-        "#": "minecraft:wheat",
-        "E": "minecraft:egg"
+        "#": "minecraft:nether_sprouts",
+        "P": "minecraft:potion"
     },
     "result": {
         "id": "howfood:lye_water",
