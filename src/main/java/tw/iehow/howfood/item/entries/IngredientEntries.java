@@ -7,6 +7,6 @@ public class IngredientEntries {
     public record Ingredient(String name, int maxStack, Item fallbackItem) {}
 
     public static final Ingredient[] INGREDIENTS = new Ingredient[] {
-            new Ingredient("empty_bottle", 64, Items.BREAD)
+//            new Ingredient("empty_bottle", 64, Items.BREAD)
     };
 }

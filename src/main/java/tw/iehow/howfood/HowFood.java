@@ -17,8 +17,8 @@ public class HowFood implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ItemsGroup.build();
-		new IngredientRegistrar().initialize(List.of(IngredientEntries.INGREDIENTS));
 		new FoodRegistrar().initialize(List.of(FoodEntries.FOODS));
+		new IngredientRegistrar().initialize(List.of(IngredientEntries.INGREDIENTS));
 		PolymerResourcePackUtils.markAsRequired();
 		PolymerResourcePackUtils.addModAssets(HowFood.MOD_ID);
 		LOGGER.info("HowFood has been initialized!");
