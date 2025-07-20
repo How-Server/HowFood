@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "B"
+    ],
+    "key": {
+        "#": "minecraft:potion",
+        "B": "howfood:bottle"
+    },
+    "result": {
+        "id": "howfood:water",
+        "count": 1
+    }
+}

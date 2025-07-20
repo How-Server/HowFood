@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " #B",
+        "TEH",
+        " W "
+    ],
+    "key": {
+        "#": "minecraft:milk_bucket",
+        "B": "howfood:brown_sugar",
+        "T": "minecraft:torchflower",
+        "E": "minecraft:ender_pearl",
+        "H": "minecraft:honey_bottle",
+        "W": "howfood:water"
+    },
+    "result": {
+        "id": "howfood:bubble_milktea",
+        "count": 1
+    }
+}

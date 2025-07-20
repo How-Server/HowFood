@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "# #",
+        "###"
+    ],
+    "key": {
+        "#": "howfood:plastic"
+    },
+    "result": {
+        "id": "howfood:bottle",
+        "count": 1
+    }
+}

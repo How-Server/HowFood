@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "T",
+        "W"
+    ],
+    "key": {
+        "#": "minecraft:milk_bucket",
+        "T": "minecraft:torchflower",
+        "W": "howfood:water"
+    },
+    "result": {
+        "id": "howfood:milktea",
+        "count": 1
+    }
+}
