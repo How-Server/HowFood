@@ -24,7 +24,7 @@ public class FoodRegistrar {
     private static int registeredFoodCount = 0;
 
     public static void initialize() {
-        for (FoodEntries.ModFood food : FoodEntries.FOODS) {
+        for (FoodEntries.Food food : FoodEntries.FOODS) {
             registerPolymerFood(food);
         }
         HowFood.LOGGER.info("{} food items registered.", registeredFoodCount);
@@ -51,7 +51,7 @@ public class FoodRegistrar {
         }
     }
 
-    public static Item registerPolymerFood(FoodEntries.ModFood foodData) {
+    public static Item registerPolymerFood(FoodEntries.Food foodData) {
         Item.Settings settings = foodSettings(foodData.maxStack(), foodData.nutrition(), foodData.saturation());
         return register(foodData.name(), s -> new PolymerFoodItem(foodData.name(), s, foodData.fallbackItem()), settings);
     }
