@@ -4,6 +4,7 @@ import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import tw.iehow.howfood.item.IngredientRegistrar;
 import tw.iehow.howfood.item.ItemsGroup;
 import tw.iehow.howfood.item.FoodRegistrar;
 
@@ -15,6 +16,7 @@ public class HowFood implements ModInitializer {
 	public void onInitialize() {
 		ItemsGroup.build();
 		FoodRegistrar.initialize();
+		IngredientRegistrar.initialize();
 		PolymerResourcePackUtils.markAsRequired();
 		PolymerResourcePackUtils.addModAssets(HowFood.MOD_ID);
 		LOGGER.info("HowFood has been initialized!");
