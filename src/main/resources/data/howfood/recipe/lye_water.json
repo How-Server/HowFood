@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "###",
+        " E "
+    ],
+    "key": {
+        "#": "minecraft:wheat",
+        "E": "minecraft:egg"
+    },
+    "result": {
+        "id": "howfood:lye_water",
+        "count": 1
+    }
+}

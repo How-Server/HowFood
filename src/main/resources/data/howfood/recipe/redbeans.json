@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#R#",
+        " # "
+    ],
+    "key": {
+        "#": "minecraft:cocoa_beans",
+        "R": "minecraft:red_tulip"
+    },
+    "result": {
+        "id": "howfood:redbeans",
+        "count": 1
+    }
+}
