@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "HSH",
+        " H "
+    ],
+    "key": {
+        "#": "minecraft:honey_bottle",
+        "H": "minecraft:honey_block",
+        "S": "howfood:sweet_ricedumpling"
+    },
+    "result": {
+        "id": "howfood:honey_ricedumpling",
+        "count": 1
+    }
+}

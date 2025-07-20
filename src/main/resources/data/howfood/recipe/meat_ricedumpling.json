@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "CEF",
+        " S "
+    ],
+    "key": {
+        "#": "minecraft:porkchop",
+        "C": "minecraft:carrot",
+        "E": "minecraft:egg",
+        "F": "minecraft:fermented_spider_eye",
+        "S": "howfood:salty_ricedumpling"
+    },
+    "result": {
+        "id": "howfood:meat_ricedumpling",
+        "count": 1
+    }
+}

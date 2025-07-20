@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "KRK",
+        "#K#"
+    ],
+    "key": {
+        "#": "minecraft:string",
+        "L": "howfood:lye_water",
+        "K": "minecraft:kelp",
+        "R": "howfood:rice"
+    },
+    "result": {
+        "id": "howfood:sweet_ricedumpling",
+        "count": 1
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#S#",
+        "KRK",
+        "#K#"
+    ],
+    "key": {
+        "#": "minecraft:string",
+        "S": "howfood:salt",
+        "K": "minecraft:kelp",
+        "R": "howfood:rice"
+    },
+    "result": {
+        "id": "howfood:salty_ricedumpling",
+        "count": 1
+    }
+}
