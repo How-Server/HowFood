@@ -14,10 +14,14 @@ public class FoodEntries {
             new Food("takoyaki", 64, 6, 0.3f, Items.BREAD),
             new Food("good_cookie", 64, 6, 0.3f, Items.BREAD),
             new Food("melon_juice", 64, 6, 0.3f, Items.BREAD),
+
             new Food("honey_ricedumpling", 64, 6, 0.3f, Items.BREAD),
             new Food("meat_ricedumpling", 64, 8, 0.3f, Items.BREAD),
             new Food("redbeans_ricedumpling", 64, 6, 0.3f, Items.BREAD),
             new Food("salty_ricedumpling", 64, 4, 0.3f, Items.BREAD),
             new Food("sweet_ricedumpling", 64, 4, 0.3f, Items.BREAD),
+            new Food("rice", 64, 2, 0.1f,Items.BREAD),
+            new Food("redbeans", 64, 2, 0.1f,Items.BREAD),
+
     };
 }
