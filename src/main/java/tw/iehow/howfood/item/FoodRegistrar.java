@@ -13,10 +13,7 @@ public class FoodRegistrar extends PolymerItemRegistrar<FoodEntries.Food> {
     protected void register(FoodEntries.Food foodData) {
         Item.Settings settings = new Item.Settings()
                 .maxCount(foodData.maxStack())
-                .food(new FoodComponent.Builder()
-                        .nutrition(foodData.nutrition())
-                        .saturationModifier(foodData.saturation())
-                        .build());
+                .food(new FoodComponent(foodData.nutrition(), foodData.saturation(), false));
 
         registerItem(
                 foodData.name(),
