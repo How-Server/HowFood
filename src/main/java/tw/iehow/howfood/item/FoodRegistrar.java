@@ -20,7 +20,7 @@ import xyz.nucleoid.packettweaker.PacketContext;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public class FoodItems {
+public class FoodRegistrar {
     private static int registeredFoodCount = 0;
 
     public static void initialize() {
