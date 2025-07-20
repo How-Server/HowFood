@@ -51,19 +51,18 @@ public class FoodRegistrar {
         }
     }
 
-    public static Item registerPolymerFood(FoodEntries.Food foodData) {
+    public static void registerPolymerFood(FoodEntries.Food foodData) {
         Item.Settings settings = foodSettings(foodData.maxStack(), foodData.nutrition(), foodData.saturation());
-        return register(foodData.name(), s -> new PolymerFoodItem(foodData.name(), s, foodData.fallbackItem()), settings);
+        register(foodData.name(), s -> new PolymerFoodItem(foodData.name(), s, foodData.fallbackItem()), settings);
     }
 
-    public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
+    public static void register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(HowFood.MOD_ID, name));
         Item item = itemFactory.apply(settings.registryKey(itemKey));
         Registry.register(Registries.ITEM, itemKey, item);
 
         ItemGroupEvents.modifyEntriesEvent(ItemsGroup.ITEM_GROUP_KEY).register(itemGroup -> itemGroup.add(item));
         registeredFoodCount++;
-        return item;
     }
 
     public static Item.Settings foodSettings(int maxCount, int nutrition, float saturation) {
