@@ -9,7 +9,7 @@ import tw.iehow.howfood.item.FoodItems;
 
 public class HowFood implements ModInitializer {
 	public static final String MOD_ID = "howfood";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final Logger LOGGER = LoggerFactory.getLogger("HowFood");
 
 	@Override
 	public void onInitialize() {
