@@ -1,7 +1,19 @@
 {
   "item.howfood.sausage_pizza": "臘腸披薩",
-  "itemTooltip.howfood.sausage_pizza": "剛出爐就吃到只剩一片的披薩。",
+  "itemTooltip.howfood.sausage_pizza": "剛出爐就吃到只剩一片。",
   "item.howfood.mushroom_pizza": "蕈菇披薩",
-  "itemTooltip.howfood.mushroom_pizza": "浩威表示好ㄘ的披薩。",
+  "itemTooltip.howfood.mushroom_pizza": "浩威表示好ㄘ。",
+  "item.howfood.tofu_ramen": "豆腐拉麵",
+  "itemTooltip.howfood.tofu_ramen": "排隊都排不到 :(",
+  "item.howfood.hotdog": "熱狗",
+  "itemTooltip.howfood.hotdog": "某管理員很愛吃。",
+  "item.howfood.takoyaki": "章魚燒",
+  "itemTooltip.howfood.takoyaki": "一盒六顆，六倍享受。",
+  "item.howfood.good_cookie": "Howie餅乾",
+  "itemTooltip.howfood.good_cookie": "要乖乖的喔。",
+  "item.howfood.melon_juice": "西瓜汁",
+  "itemTooltip.howfood.melon_juice": "清涼盛夏。",
+  "item.howfood.": "",
+  "itemTooltip.howfood.": "",
   "itemGroup.howfood": "HowFood"
 }

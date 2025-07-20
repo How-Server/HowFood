@@ -3,5 +3,18 @@
   "itemTooltip.howfood.sausage_pizza": "The pizza right out of the oven with only one slice left.",
   "item.howfood.mushroom_pizza": "Mushroom Pizza",
   "itemTooltip.howfood.mushroom_pizza": "Howie said the pizza was delicious.",
+  "item.howfood.tofu_ramen": "Tofu Ramen",
+  "itemTooltip.howfood.tofu_ramen": "I can’t even get in line :(",
+  "item.howfood.hotdog": "Hot Dog",
+  "itemTooltip.howfood.hotdog": "A certain admin really loves this.",
+  "item.howfood.takoyaki": "Takoyaki",
+  "itemTooltip.howfood.takoyaki": "Six pieces for six times the joy.",
+  "item.howfood.good_cookie": "Good Cookie",
+  "itemTooltip.howfood.good_cookie": "Be a good kid.",
+  "item.howfood.melon_juice": "Melon Juice",
+  "itemTooltip.howfood.melon_juice": "Refreshing summer drink.",
+  "item.howfood.": "",
+  "itemTooltip.howfood.": "",
+
   "itemGroup.howfood": "HowFood"
 }

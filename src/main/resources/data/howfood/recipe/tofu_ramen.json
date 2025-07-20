@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#P#",
+        "WFE",
+        " B "
+    ],
+    "key": {
+        "#": "minecraft:dried_kelp",
+        "P": "minecraft:porkchop",
+        "W": "minecraft:wheat",
+        "F": "minecraft:fern",
+        "E": "minecraft:egg",
+        "B": "minecraft:bowl"
+    },
+    "result": {
+        "id": "howfood:tofu_ramen",
+        "count": 1
+    }
+}
