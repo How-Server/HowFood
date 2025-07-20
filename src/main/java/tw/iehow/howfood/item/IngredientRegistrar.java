@@ -1,5 +1,6 @@
 package tw.iehow.howfood.item;
 
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.Item;
 import net.minecraft.util.Formatting;
 import tw.iehow.howfood.item.base.BasePolymerItem;
@@ -11,6 +12,7 @@ public class IngredientRegistrar extends PolymerItemRegistrar<IngredientEntries.
     @Override
     protected void register(IngredientEntries.Ingredient ingredientData) {
         Item.Settings settings = new Item.Settings()
+                .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
                 .maxCount(ingredientData.maxStack());
 
         registerItem(
