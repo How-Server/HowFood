@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tw.iehow.howfood.item.*;
+import tw.iehow.howfood.item.entries.DrinkEntries;
 import tw.iehow.howfood.item.entries.FoodEntries;
 import tw.iehow.howfood.item.entries.IngredientEntries;
 
@@ -18,6 +19,7 @@ public class HowFood implements ModInitializer {
 	public void onInitialize() {
 		ItemsGroup.build();
 		new FoodRegistrar().initialize(List.of(FoodEntries.FOODS));
+		new DrinkRegistrar().initialize(List.of(DrinkEntries.DRINKS));
 		new IngredientRegistrar().initialize(List.of(IngredientEntries.INGREDIENTS));
 		PolymerResourcePackUtils.markAsRequired();
 		PolymerResourcePackUtils.addModAssets(HowFood.MOD_ID);

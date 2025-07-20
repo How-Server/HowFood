@@ -31,8 +31,19 @@
   "itemTooltip.howfood.lye_water": "Stinky alkaline water.",
   "item.howfood.salt": "Pinch of Salt",
   "itemTooltip.howfood.salt": "High-purity refined iodized salt.",
+  "item.howfood.water": "Water",
+  "itemTooltip.howfood.water": "Extracted by RO Knees & Toes",
+  "item.howfood.milktea": "Milk Tea",
+  "itemTooltip.howfood.milktea": "As soothing as your breakfast shop's",
+  "item.howfood.bubble_milktea": "Bubble Milk Tea",
+  "itemTooltip.howfood.bubble_milktea": "Shake 55 times before drinking",
+  "item.howfood.bottle": "Bottle",
+  "itemTooltip.howfood.bottle": "Molded in one piece, reusable",
+  "item.howfood.plastic": "Plastic",
+  "itemTooltip.howfood.plastic": "The kind that's hard to decompose",
+  "item.howfood.brown_sugar": "Brown Sugar",
+  "itemTooltip.howfood.brown_sugar": "Burnt white sugar",
   "item.howfood.": "",
   "itemTooltip.howfood.": "",
-
   "itemGroup.howfood": "HowFood"
 }
