@@ -6,7 +6,6 @@ import net.minecraft.component.type.FoodComponent;
 import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -24,38 +23,37 @@ import java.util.function.Function;
 public class FoodItems {
     private static int registeredFoodCount = 0;
 
-    public static final Item SAUSAGE_PIZZA = registerPolymerFood("sausage_pizza",
-            foodSettings(64, 8, 0.3f), Items.BREAD);
-    public static final Item MUSHROOM_PIZZA = registerPolymerFood("mushroom_pizza",
-            foodSettings(64, 6, 0.3f), Items.BREAD);
-
     public static void initialize() {
+        for (FoodEntries.ModFood food : FoodEntries.FOODS) {
+            registerPolymerFood(food);
+        }
         HowFood.LOGGER.info("{} food items registered.", registeredFoodCount);
     }
 
     public static class PolymerFoodItem extends Item implements PolymerItem {
         private final String tooltipKey;
-        private final Item polymerItem;
+        private final Item fallbackItem;
 
-        public PolymerFoodItem(String tooltipKey, Item.Settings settings, Item polymerItem) {
+        public PolymerFoodItem(String tooltipKey, Item.Settings settings, Item fallbackItem) {
             super(settings);
             this.tooltipKey = tooltipKey;
-            this.polymerItem = polymerItem;
+            this.fallbackItem = fallbackItem;
         }
 
         @Override
         public Item getPolymerItem(ItemStack stack, PacketContext context) {
-            return polymerItem;
+            return fallbackItem;
         }
 
         @Override
-        public void appendTooltip(ItemStack stack, Item.TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> tooltip, TooltipType type) {
+        public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> tooltip, TooltipType type) {
             tooltip.accept(Text.translatable("itemTooltip.howfood." + tooltipKey).formatted(Formatting.GOLD));
         }
     }
 
-    public static Item registerPolymerFood(String name, Item.Settings settings, Item fallbackItem) {
-        return register(name, s -> new PolymerFoodItem(name, s ,fallbackItem), settings);
+    public static Item registerPolymerFood(FoodEntries.ModFood foodData) {
+        Item.Settings settings = foodSettings(foodData.maxStack(), foodData.nutrition(), foodData.saturation());
+        return register(foodData.name(), s -> new PolymerFoodItem(foodData.name(), s, foodData.fallbackItem()), settings);
     }
 
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
