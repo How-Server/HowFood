@@ -1,4 +1,4 @@
-package tw.iehow.howfood.item;
+package tw.iehow.howfood.item.entries;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;

@@ -1,4 +1,4 @@
-package tw.iehow.howfood.item;
+package tw.iehow.howfood.item.base;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -8,6 +8,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import tw.iehow.howfood.HowFood;
+import tw.iehow.howfood.item.ItemsGroup;
 
 import java.util.function.Function;
 

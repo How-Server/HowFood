@@ -3,6 +3,9 @@ package tw.iehow.howfood.item;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.util.Formatting;
+import tw.iehow.howfood.item.base.BasePolymerItem;
+import tw.iehow.howfood.item.base.PolymerItemRegistrar;
+import tw.iehow.howfood.item.entries.FoodEntries;
 
 public class FoodRegistrar extends PolymerItemRegistrar<FoodEntries.Food> {
 

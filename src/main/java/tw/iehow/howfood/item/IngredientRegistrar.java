@@ -2,6 +2,9 @@ package tw.iehow.howfood.item;
 
 import net.minecraft.item.Item;
 import net.minecraft.util.Formatting;
+import tw.iehow.howfood.item.base.BasePolymerItem;
+import tw.iehow.howfood.item.base.PolymerItemRegistrar;
+import tw.iehow.howfood.item.entries.IngredientEntries;
 
 public class IngredientRegistrar extends PolymerItemRegistrar<IngredientEntries.Ingredient> {
 

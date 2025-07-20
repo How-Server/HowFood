@@ -1,4 +1,4 @@
-package tw.iehow.howfood.item;
+package tw.iehow.howfood.item.base;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
 import net.minecraft.item.Item;

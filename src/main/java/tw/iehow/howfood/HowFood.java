@@ -5,6 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import tw.iehow.howfood.item.*;
+import tw.iehow.howfood.item.entries.FoodEntries;
+import tw.iehow.howfood.item.entries.IngredientEntries;
 
 import java.util.List;
 
