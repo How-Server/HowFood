@@ -24,7 +24,7 @@ public class IngredientRegistrar extends PolymerItemRegistrar<IngredientEntries.
 
     public static class IngredientItem extends BasePolymerItem {
         public IngredientItem(String tooltipKey, Settings settings, Item fallbackItem) {
-            super(tooltipKey, settings, fallbackItem, Formatting.GRAY);
+            super(tooltipKey, settings, fallbackItem, Formatting.GRAY, 0, 0);
         }
     }
 }

@@ -17,14 +17,14 @@ public class FoodRegistrar extends PolymerItemRegistrar<FoodEntries.Food> {
 
         registerItem(
                 foodData.name(),
-                s -> new FoodItem(foodData.name(), s, foodData.fallbackItem()),
+                s -> new FoodItem(foodData.name(), s, foodData.fallbackItem(), foodData.nutrition(), foodData.saturation()),
                 settings
         );
     }
 
     public static class FoodItem extends BasePolymerItem {
-        public FoodItem(String tooltipKey, Settings settings, Item fallbackItem) {
-            super(tooltipKey, settings, fallbackItem, Formatting.GOLD);
+        public FoodItem(String tooltipKey, Settings settings, Item fallbackItem, int nutrition, float saturation) {
+            super(tooltipKey, settings, fallbackItem, Formatting.GOLD, nutrition, saturation);
         }
     }
 }

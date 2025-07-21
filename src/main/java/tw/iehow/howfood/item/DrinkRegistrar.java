@@ -33,14 +33,14 @@ public class DrinkRegistrar extends PolymerItemRegistrar<DrinkEntries.Drink> {
                         .build());
         registerItem(
                 drinkData.name(),
-                s -> new DrinkItem(drinkData.name(), s, drinkData.fallbackItem()),
+                s -> new DrinkItem(drinkData.name(), s, drinkData.fallbackItem(), drinkData.nutrition(), drinkData.saturation()),
                 settings
         );
     }
 
     public static class DrinkItem extends BasePolymerItem {
-        public DrinkItem(String tooltipKey, Settings settings, Item fallbackItem) {
-            super(tooltipKey, settings, fallbackItem, Formatting.GOLD);
+        public DrinkItem(String tooltipKey, Settings settings, Item fallbackItem, int nutrition, float saturation) {
+            super(tooltipKey, settings, fallbackItem, Formatting.GOLD, nutrition, saturation);
         }
 
         @Override
