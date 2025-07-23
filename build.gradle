@@ -10,6 +10,28 @@ base {
 	archivesName = project.archives_base_name
 }
 
+loom {
+	runs {
+		datagen {
+			server()
+			name = "Data Generator"
+			runDir = "build/datagen"
+			vmArg("-Dfabric-api.datagen")
+			vmArg("-Dfabric-api.datagen.modid=howfood")
+			vmArg("-Dfabric-api.datagen.output-dir=${file("src/main/generated")}")
+			source sourceSets.main
+		}
+	}
+}
+
+sourceSets {
+	main {
+		resources {
+			srcDirs += ["src/main/generated"]
+		}
+	}
+}
+
 repositories {
 	// Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because

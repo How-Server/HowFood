@@ -17,6 +17,9 @@
 	"entrypoints": {
 		"main": [
           "tw.iehow.howfood.HowFood"
+		],
+		"fabric-datagen": [
+			"tw.iehow.howfood.datagen.HowFoodDataGenerator"
 		]
 	},
 	"mixins": [
