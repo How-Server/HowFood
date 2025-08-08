@@ -48,6 +48,7 @@ public class DrinkRegistrar extends PolymerItemRegistrar<DrinkEntries.Drink> {
             PlayerEntity playerEntity = (PlayerEntity) user;
             ItemEntity item = playerEntity.dropItem(Registries.ITEM.get(Identifier.of(HowFood.MOD_ID, "bottle")).getDefaultStack(), true);
             Objects.requireNonNull(item).setPickupDelay(0);
+            stack.decrement(1);
             return stack;
         }
     }
