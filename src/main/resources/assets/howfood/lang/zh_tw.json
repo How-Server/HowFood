@@ -45,5 +45,9 @@
   "itemTooltip.howfood.brown_sugar": "烤焦的白糖",
   "item.howfood.": "",
   "itemTooltip.howfood.": "",
-  "itemGroup.howfood": "HowFood"
+  "itemGroup.howfood": "HowFood",
+  "item.howfood.green_onions": "青蔥",
+  "itemTooltip.howfood.green_onions": "三根大青蔥",
+  "item.howfood.bbq_stick": "烤肉串",
+  "itemTooltip.howfood.brown_sugar": "葷素結合營養豐富"
 }

@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "O#",
+        "#O"
+    ],
+    "key": {
+        "#": "minecraft:bamboo",
+        "O": "minecraft:lime_dye"
+    },
+    "result": {
+        "id": "howfood:green_onions",
+        "count": 1
+    }
+}

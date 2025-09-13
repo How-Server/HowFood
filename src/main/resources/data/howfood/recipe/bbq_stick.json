@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  G",
+        " M ",
+        "S  "
+    ],
+    "key": {
+        "G": "howfood:green_onions",
+        "M": "minecraft:beef",
+        "S": "minecraft:stick"
+    },
+    "result": {
+        "id": "howfood:bbq_stick",
+        "count": 1
+    }
+}

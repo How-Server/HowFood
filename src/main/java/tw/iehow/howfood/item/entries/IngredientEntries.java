@@ -13,5 +13,6 @@ public class IngredientEntries {
 
             new Ingredient("lye_water", 64, Items.BREAD),
             new Ingredient("salt", 64, Items.BREAD),
+            new Ingredient("green_onions", 64, Items.BREAD),
     };
 }

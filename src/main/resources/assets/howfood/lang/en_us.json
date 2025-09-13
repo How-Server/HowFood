@@ -43,6 +43,10 @@
   "itemTooltip.howfood.plastic": "The kind that's hard to decompose",
   "item.howfood.brown_sugar": "Brown Sugar",
   "itemTooltip.howfood.brown_sugar": "Burnt white sugar",
+  "item.howfood.green_onions": "green onions",
+  "itemTooltip.howfood.green_onions": "a stack of big green onions",
+  "item.howfood.bbq_stick": "bbq stick",
+  "itemTooltip.howfood.brown_sugar": "nutritious combination",
   "item.howfood.": "",
   "itemTooltip.howfood.": "",
   "itemGroup.howfood": "HowFood"

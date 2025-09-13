@@ -13,6 +13,7 @@ public class FoodEntries {
             new Food("tofu_ramen", 64, 8, 12.0f, Items.BREAD),
             new Food("hotdog", 64, 8, 12.0f, Items.BREAD),
             new Food("takoyaki", 64, 8, 12.0f, Items.BREAD),
+            new Food("bbq_stick", 16, 8, 12.0f, Items.BREAD),
             new Food("good_cookie", 64, 6, 9.0f, Items.BREAD),
             // saturation = nutrition
             new Food("melon_juice", 64, 6, 6.0f, Items.BREAD),
