@@ -4,8 +4,9 @@
 	"texture_size": [4, 4],
 	"textures": {
 		"1": "howfood:item/bbq_stick/niku",
-		"2": "item/weird_item/bbq/cat_bbq/niku2",
-		"3": "item/weird_item/bbq/cat_bbq/kusa"
+		"2": "howfood:item/bbq_stick/niku2",
+		"3": "howfood:item/bbq_stick/kusa",
+		"particle": "howfood:item/bbq_stick/niku2"
 	},
 	"elements": [
 		{
