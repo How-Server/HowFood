@@ -1,7 +1,7 @@
 package tw.iehow.howfood.item.entries;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
 public class FoodEntries {
     public record Food(String name, int maxStack, int nutrition, float saturation, Item fallbackItem) {}
@@ -25,8 +25,8 @@ public class FoodEntries {
             new Food("salty_ricedumpling", 64, 6, 9.0f, Items.BREAD),
             new Food("sweet_ricedumpling", 64, 6, 9.0f, Items.BREAD),
             // saturation = nutrition * 2.0f
-            new Food("rice", 64, 2, 4.0f,Items.BREAD),
-            new Food("redbeans", 64, 2, 4.0f,Items.BREAD),
+            new Food("rice", 64, 2, 4.0f, Items.BREAD),
+            new Food("redbeans", 64, 2, 4.0f, Items.BREAD),
 
     };
 }

@@ -1,18 +1,18 @@
 package tw.iehow.howfood.item;
 
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.ConsumableComponent;
-import net.minecraft.component.type.FoodComponent;
-import net.minecraft.entity.ItemEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.World;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Holder;
+import net.minecraft.ChatFormatting;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.Level;
 import tw.iehow.howfood.HowFood;
 import tw.iehow.howfood.item.base.BasePolymerItem;
 import tw.iehow.howfood.item.base.PolymerItemRegistrar;
@@ -24,12 +24,12 @@ public class DrinkRegistrar extends PolymerItemRegistrar<DrinkEntries.Drink> {
 
     @Override
     protected void register(DrinkEntries.Drink drinkData) {
-        Item.Settings settings = new Item.Settings()
-                .maxCount(drinkData.maxStack())
+        Item.Properties settings = new Item.Properties()
+                .stacksTo(drinkData.maxStack())
                 .useCooldown(1.0f)
-                .food(new FoodComponent(drinkData.nutrition(), drinkData.saturation(), false))
-                .component(DataComponentTypes.CONSUMABLE, ConsumableComponent.builder()
-                        .sound(RegistryEntry.of(drinkData.soundEvent()))
+                .food(new FoodProperties(drinkData.nutrition(), drinkData.saturation(), false))
+                .component(DataComponents.CONSUMABLE, Consumable.builder()
+                        .sound(Holder.direct(drinkData.soundEvent()))
                         .build());
         registerItem(
                 drinkData.name(),
@@ -39,16 +39,16 @@ public class DrinkRegistrar extends PolymerItemRegistrar<DrinkEntries.Drink> {
     }
 
     public static class DrinkItem extends BasePolymerItem {
-        public DrinkItem(String tooltipKey, Settings settings, Item fallbackItem, int nutrition, float saturation) {
-            super(tooltipKey, settings, fallbackItem, Formatting.GOLD, nutrition, saturation);
+        public DrinkItem(String tooltipKey, Properties settings, Item fallbackItem, int nutrition, float saturation) {
+            super(tooltipKey, settings, fallbackItem, ChatFormatting.GOLD, nutrition, saturation);
         }
 
         @Override
-        public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-            PlayerEntity playerEntity = (PlayerEntity) user;
-            ItemEntity item = playerEntity.dropItem(Registries.ITEM.get(Identifier.of(HowFood.MOD_ID, "bottle")).getDefaultStack(), true);
-            Objects.requireNonNull(item).setPickupDelay(0);
-            stack.decrement(1);
+        public ItemStack finishUsingItem(ItemStack stack, Level world, LivingEntity user) {
+            Player playerEntity = (Player) user;
+            ItemEntity item = playerEntity.drop(BuiltInRegistries.ITEM.getValue(Identifier.fromNamespaceAndPath(HowFood.MOD_ID, "bottle")).getDefaultInstance(), true);
+            Objects.requireNonNull(item).setPickUpDelay(0);
+            stack.shrink(1);
             return stack;
         }
     }

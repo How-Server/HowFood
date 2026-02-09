@@ -1,8 +1,8 @@
 package tw.iehow.howfood.item;
 
-import net.minecraft.component.type.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.util.Formatting;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.ChatFormatting;
 import tw.iehow.howfood.item.base.BasePolymerItem;
 import tw.iehow.howfood.item.base.PolymerItemRegistrar;
 import tw.iehow.howfood.item.entries.FoodEntries;
@@ -11,9 +11,9 @@ public class FoodRegistrar extends PolymerItemRegistrar<FoodEntries.Food> {
 
     @Override
     protected void register(FoodEntries.Food foodData) {
-        Item.Settings settings = new Item.Settings()
-                .maxCount(foodData.maxStack())
-                .food(new FoodComponent(foodData.nutrition(), foodData.saturation(), false));
+        Item.Properties settings = new Item.Properties()
+                .stacksTo(foodData.maxStack())
+                .food(new FoodProperties(foodData.nutrition(), foodData.saturation(), false));
 
         registerItem(
                 foodData.name(),
@@ -23,8 +23,8 @@ public class FoodRegistrar extends PolymerItemRegistrar<FoodEntries.Food> {
     }
 
     public static class FoodItem extends BasePolymerItem {
-        public FoodItem(String tooltipKey, Settings settings, Item fallbackItem, int nutrition, float saturation) {
-            super(tooltipKey, settings, fallbackItem, Formatting.GOLD, nutrition, saturation);
+        public FoodItem(String tooltipKey, Properties settings, Item fallbackItem, int nutrition, float saturation) {
+            super(tooltipKey, settings, fallbackItem, ChatFormatting.GOLD, nutrition, saturation);
         }
     }
 }

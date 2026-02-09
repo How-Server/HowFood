@@ -1,12 +1,12 @@
 package tw.iehow.howfood.item.base;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.world.item.Item;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import tw.iehow.howfood.HowFood;
 import tw.iehow.howfood.item.ItemsGroup;
 
@@ -24,11 +24,11 @@ public abstract class PolymerItemRegistrar<T> {
 
     protected abstract void register(T entry);
 
-    protected void registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(HowFood.MOD_ID, name));
-        Item item = itemFactory.apply(settings.registryKey(itemKey));
-        Registry.register(Registries.ITEM, itemKey, item);
-        ItemGroupEvents.modifyEntriesEvent(ItemsGroup.ITEM_GROUP_KEY).register(itemGroup -> itemGroup.add(item));
+    protected void registerItem(String name, Function<Item.Properties, Item> itemFactory, Item.Properties settings) {
+        ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(HowFood.MOD_ID, name));
+        Item item = itemFactory.apply(settings.setId(itemKey));
+        Registry.register(BuiltInRegistries.ITEM, itemKey, item);
+        ItemGroupEvents.modifyEntriesEvent(ItemsGroup.ITEM_GROUP_KEY).register(itemGroup -> itemGroup.accept(item));
         registeredCount++;
     }
 }

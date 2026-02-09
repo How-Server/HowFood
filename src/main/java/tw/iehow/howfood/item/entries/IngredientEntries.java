@@ -1,7 +1,7 @@
 package tw.iehow.howfood.item.entries;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 
 public class IngredientEntries {
     public record Ingredient(String name, int maxStack, Item fallbackItem) {}

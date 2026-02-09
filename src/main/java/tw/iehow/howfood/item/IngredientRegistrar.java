@@ -1,8 +1,8 @@
 package tw.iehow.howfood.item;
 
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.item.Item;
-import net.minecraft.util.Formatting;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.Item;
+import net.minecraft.ChatFormatting;
 import tw.iehow.howfood.item.base.BasePolymerItem;
 import tw.iehow.howfood.item.base.PolymerItemRegistrar;
 import tw.iehow.howfood.item.entries.IngredientEntries;
@@ -11,9 +11,9 @@ public class IngredientRegistrar extends PolymerItemRegistrar<IngredientEntries.
 
     @Override
     protected void register(IngredientEntries.Ingredient ingredientData) {
-        Item.Settings settings = new Item.Settings()
-                .component(DataComponentTypes.ENCHANTMENT_GLINT_OVERRIDE, true)
-                .maxCount(ingredientData.maxStack());
+        Item.Properties settings = new Item.Properties()
+                .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)
+                .stacksTo(ingredientData.maxStack());
 
         registerItem(
                 ingredientData.name(),
@@ -23,8 +23,8 @@ public class IngredientRegistrar extends PolymerItemRegistrar<IngredientEntries.
     }
 
     public static class IngredientItem extends BasePolymerItem {
-        public IngredientItem(String tooltipKey, Settings settings, Item fallbackItem) {
-            super(tooltipKey, settings, fallbackItem, Formatting.GRAY, 0, 0);
+        public IngredientItem(String tooltipKey, Properties settings, Item fallbackItem) {
+            super(tooltipKey, settings, fallbackItem, ChatFormatting.GRAY, 0, 0);
         }
     }
 }
